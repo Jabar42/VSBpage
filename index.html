@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VSB - Landing Page</title>
+    <title>Masterclass Gratuita - IA en la Clínica Veterinaria</title>
     <style>
         * {
             margin: 0;
@@ -12,49 +12,158 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 1rem;
         }
 
         .container {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            padding: 3rem;
-            max-width: 600px;
-            width: 90%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            padding: 2.5rem;
+            max-width: 800px;
+            width: 100%;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2d3748;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .free-badge {
+            background: #FF0000;
+            color: #FFD700;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            border: 3px solid #000;
+            display: inline-block;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-family: 'Comic Sans MS', cursive;
         }
 
-        .description {
+        .main-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #00CED1;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #000;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .event-details {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #00CED1;
+        }
+
+        .date-time {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00CED1;
+            margin-bottom: 0.5rem;
+        }
+
+        .time {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .platform {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .gift-section {
+            background: #FFF8DC;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            border: 2px dashed #FFD700;
+        }
+
+        .gift-text {
             font-size: 1.1rem;
-            color: #718096;
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 0.5rem;
+        }
+
+        .gift-icon {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        .speaker-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .speaker-info {
+            text-align: left;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .speaker-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00CED1;
+            margin-bottom: 0.5rem;
+        }
+
+        .speaker-title {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .mvz-badge {
+            background: #00CED1;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            display: inline-block;
         }
 
         .form-container {
             background: #f7fafc;
             padding: 2rem;
             border-radius: 15px;
-            border: 1px solid #e2e8f0;
+            border: 2px solid #e2e8f0;
+            margin-top: 2rem;
         }
 
         .form-group {
@@ -82,74 +191,99 @@
 
         .form-input:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #00CED1;
+            box-shadow: 0 0 0 3px rgba(0, 206, 209, 0.1);
         }
 
         .submit-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
             color: white;
             border: none;
             padding: 1rem 2rem;
             border-radius: 10px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             width: 100%;
+            text-transform: uppercase;
         }
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 206, 209, 0.3);
         }
 
-        .submit-btn:active {
-            transform: translateY(0);
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
         }
 
-        .success-message {
-            background: #c6f6d5;
-            color: #22543d;
+        .logo {
+            background: #f8f9fa;
             padding: 1rem;
             border-radius: 10px;
-            margin-top: 1rem;
-            display: none;
-        }
-
-        .error-message {
-            background: #fed7d7;
-            color: #742a2a;
-            padding: 1rem;
-            border-radius: 10px;
-            margin-top: 1rem;
-            display: none;
+            border: 1px solid #e2e8f0;
+            font-weight: bold;
+            color: #00CED1;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 2rem;
-                margin: 1rem;
+                padding: 1.5rem;
             }
             
-            .title {
+            .main-title {
                 font-size: 2rem;
             }
             
-            .description {
+            .subtitle {
                 font-size: 1rem;
+            }
+            
+            .speaker-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .speaker-info {
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="title">MASTERCLASS GRATUITA</h1>
-        <p class="description">
-            ¡Únete a nuestra masterclass gratuita! Obtén acceso exclusivo a contenido de valor, 
-            estrategias probadas y técnicas avanzadas que transformarán tu conocimiento. 
-            Regístrate ahora y recibe toda la información directamente en tu correo electrónico.
-        </p>
+        <div class="free-badge">FREE</div>
+        
+        <h1 class="main-title">MASTERCLASS</h1>
+        <h2 class="subtitle">IA EN LA CLÍNICA DIARIA: VETERINARIOS MÁS EFICIENTES</h2>
+        
+        <div class="event-details">
+            <div class="date-time">12/Ago</div>
+            <div class="time">7:30 P.M. Hora COL 🇨🇴</div>
+            <div class="platform">
+                <span>📹</span>
+                <span>Google Meet</span>
+            </div>
+        </div>
+        
+        <div class="gift-section">
+            <div class="gift-text">NO TE LO PIERDAS</div>
+            <div class="gift-text">Tendremos regalos</div>
+            <div class="gift-icon">🎁</div>
+        </div>
+        
+        <div class="speaker-section">
+            <div class="speaker-info">
+                <div class="speaker-name">NICOLÁS PEDRAZA</div>
+                <div class="speaker-title">MVZ y experto en marketing</div>
+                <div class="mvz-badge">MVZ</div>
+            </div>
+        </div>
         
         <div class="form-container">
             <form name="contact" netlify data-netlify="true">
@@ -169,23 +303,11 @@
                     Registrarme en la Masterclass
                 </button>
             </form>
-            
-            <div class="success-message" id="success-message">
-                ¡Gracias por suscribirte! Te mantendremos informado.
-            </div>
-            
-            <div class="error-message" id="error-message">
-                Hubo un error al enviar el formulario. Por favor, intenta de nuevo.
-            </div>
         </div>
         
-        <div style="margin-top: 2rem; text-align: center;">
-            <p style="color: #718096; margin-bottom: 1rem; font-size: 1rem;">
-                ¿Ya te registraste? Agrega el evento a tu calendario:
-            </p>
-            <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MzlidG1ocWh0M2t1YzM2M2g3ZmtpbTYzaXYgZmFtaWx5MTM3MjYyOTc2OTc4Njk0MTU3OTNAZw&amp;tmsrc=family13726297697869415793%40group.calendar.google.com">
-                <img border="0" src="https://calendar.google.com/calendar/images/ext/gc_button1_en.gif" alt="Google Calendar">
-            </a>
+        <div class="logos">
+            <div class="logo">Vetic</div>
+            <div class="logo">Veterinario sin</div>
         </div>
     </div>
 
@@ -196,16 +318,10 @@
             
             const formData = new FormData(this);
             const submitBtn = document.querySelector('.submit-btn');
-            const successMessage = document.getElementById('success-message');
-            const errorMessage = document.getElementById('error-message');
             
             // Show loading state
             submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
-            
-            // Hide previous messages
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
             
             // Submit form using Netlify's form handling
             fetch('/', {
@@ -222,11 +338,11 @@
                 }
             })
             .catch(error => {
-                errorMessage.style.display = 'block';
                 console.error('Error:', error);
+                alert('Hubo un error al enviar el formulario. Por favor, intenta de nuevo.');
             })
             .finally(() => {
-                submitBtn.textContent = 'Suscribirse';
+                submitBtn.textContent = 'Registrarme en la Masterclass';
                 submitBtn.disabled = false;
             });
         });
