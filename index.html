@@ -144,20 +144,16 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">VSB</h1>
+        <h1 class="title">MASTER CLASS GRATUITA</h1>
         <p class="description">
             Bienvenido a nuestra plataforma. Suscríbete para recibir las últimas noticias, 
             actualizaciones y contenido exclusivo directamente en tu correo electrónico.
         </p>
         
         <div class="form-container">
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
                 <input type="hidden" name="form-name" value="contact" />
-                <p class="hidden">
-                    <label>
-                        Don't fill this out if you're human: <input name="bot-field" />
-                    </label>
-                </p>
+                
                 
                 <div class="form-group">
                     <label for="email" class="form-label">Correo Electrónico</label>
@@ -211,8 +207,8 @@
             })
             .then(response => {
                 if (response.ok) {
-                    successMessage.style.display = 'block';
-                    document.querySelector('form').reset();
+                    // Redirect to thank you page
+                    window.location.href = 'thank-you.html';
                 } else {
                     throw new Error('Network response was not ok');
                 }
