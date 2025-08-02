@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias - VSB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #48bb78, #38a169);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        .success-icon::before {
+            content: "✓";
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(72, 187, 120, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(72, 187, 120, 0);
+            }
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #718096;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .features {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            color: #4a5568;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .back-btn:active {
+            transform: translateY(0);
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .social-links p {
+            color: #718096;
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: #f7fafc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid #e2e8f0;
+        }
+
+        .social-icon:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                margin: 1rem;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon"></div>
+        
+        <h1 class="title">¡Gracias!</h1>
+        <h2 class="subtitle">Tu suscripción ha sido confirmada</h2>
+        
+        <p class="description">
+            Te hemos enviado un correo de confirmación. Pronto recibirás nuestras 
+            mejores noticias, actualizaciones y contenido exclusivo directamente en tu bandeja de entrada.
+        </p>
+        
+        <div class="features">
+            <h3 style="margin-bottom: 1rem; color: #2d3748;">Lo que recibirás:</h3>
+            <ul class="feature-list">
+                <li>Noticias y actualizaciones exclusivas</li>
+                <li>Contenido premium y recursos especiales</li>
+                <li>Ofertas y descuentos únicos</li>
+                <li>Acceso anticipado a nuevos productos</li>
+            </ul>
+        </div>
+        
+        <a href="index.html" class="back-btn">
+            Volver al Inicio
+        </a>
+        
+        <div class="social-links">
+            <p>Síguenos en redes sociales</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon" title="Facebook">f</a>
+                <a href="#" class="social-icon" title="Twitter">t</a>
+                <a href="#" class="social-icon" title="Instagram">📷</a>
+                <a href="#" class="social-icon" title="LinkedIn">in</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-redirect after 10 seconds
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 10000);
+
+        // Add smooth animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(20px)';
+            
+            setTimeout(function() {
+                container.style.transition = 'all 0.6s ease';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 
