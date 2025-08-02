@@ -144,17 +144,14 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">MASTER CLASS GRATUITA</h1>
+        <h1 class="title">MASTERCLASS GRATUITA</h1>
         <p class="description">
             Bienvenido a nuestra plataforma. Suscríbete para recibir las últimas noticias, 
             actualizaciones y contenido exclusivo directamente en tu correo electrónico.
         </p>
         
         <div class="form-container">
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
-                <input type="hidden" name="form-name" value="contact" />
-                
-                
+            <form name="contact" netlify>
                 <div class="form-group">
                     <label for="email" class="form-label">Correo Electrónico</label>
                     <input 
@@ -200,6 +197,7 @@
             successMessage.style.display = 'none';
             errorMessage.style.display = 'none';
             
+            // Submit form using Netlify's form handling
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

@@ -32,13 +32,20 @@ VSBpage/
 
 ## Configuración para Netlify
 
-El formulario está configurado para funcionar automáticamente con Netlify:
+El formulario está configurado para funcionar automáticamente con Netlify usando la sintaxis oficial:
 
-- `data-netlify="true"` - Habilita el procesamiento de formularios
-- `netlify-honeypot="bot-field"` - Protección anti-spam
-- Campo oculto `bot-field` para detección de bots
-- Campo oculto `form-name` para identificación del formulario
+- `name="contact"` - Identifica el formulario
+- `netlify` - Habilita el procesamiento automático de formularios
+- Campo de email con validación HTML5
 - Redirección automática a `thank-you.html` después del envío
+
+### Sintaxis utilizada:
+```html
+<form name="contact" netlify>
+  <input type="email" name="email" required />
+  <button type="submit">Suscribirse</button>
+</form>
+```
 
 ## Flujo de Usuario
 
