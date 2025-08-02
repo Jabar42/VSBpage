@@ -1,21 +1,22 @@
-# Masterclass Gratuita - IA en la Clínica Veterinaria
+# VSB Landing Page
 
-Una landing page moderna y elegante para el registro de una masterclass gratuita sobre inteligencia artificial en la práctica clínica veterinaria.
+Una landing page moderna y elegante para el registro de una masterclass gratuita con formulario compatible con Netlify.
 
 ## Características
 
-- ✅ Diseño moderno y responsive inspirado en la imagen promocional
-- ✅ Formulario de registro para masterclass gratuita sobre IA veterinaria
+- ✅ Diseño moderno y responsive
+- ✅ Formulario de registro para masterclass gratuita
 - ✅ Página de agradecimiento con redirección automática
 - ✅ Validación de formulario
-- ✅ Diseño con colores turquesa y elementos llamativos
+- ✅ Mensajes de éxito y error
+- ✅ Diseño centrado con gradiente de fondo
 - ✅ Compatible con dispositivos móviles
 - ✅ Animaciones suaves y efectos visuales
 
 ## Tecnologías Utilizadas
 
 - HTML5
-- CSS3 (con gradientes turquesa y animaciones)
+- CSS3 (con gradientes y animaciones)
 - JavaScript vanilla
 - Netlify Forms
 
@@ -50,17 +51,9 @@ El formulario está configurado para funcionar automáticamente con Netlify usan
 ## Flujo de Usuario
 
 1. El usuario visita la página principal (`index.html`)
-2. Completa el formulario de registro para la masterclass gratuita sobre IA veterinaria
+2. Completa el formulario de registro para la masterclass gratuita
 3. Al enviar, es redirigido automáticamente a la página de agradecimiento (`thank-you.html`)
 4. La página de agradecimiento muestra confirmación y se auto-redirige al inicio después de 10 segundos
-
-## Detalles del Evento
-
-- **Fecha:** 12 de Agosto
-- **Hora:** 7:30 P.M. (Hora Colombia)
-- **Plataforma:** Google Meet
-- **Ponente:** Nicolás Pedraza - MVZ y experto en marketing
-- **Tema:** IA en la Clínica Diaria: Veterinarios Más Eficientes
 
 ## Despliegue
 
@@ -72,7 +65,7 @@ El formulario está configurado para funcionar automáticamente con Netlify usan
 ## Personalización
 
 Puedes personalizar fácilmente:
-- Colores del gradiente turquesa en el CSS
+- Colores del gradiente en el CSS
 - Texto del título y descripción
 - Mensajes de éxito y error
 - Estilos del formulario

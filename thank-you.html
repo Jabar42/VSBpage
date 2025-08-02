@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Gracias! - Masterclass IA Veterinaria</title>
+    <title>Gracias - VSB</title>
     <style>
         * {
             margin: 0;
@@ -12,31 +12,30 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
         }
 
         .container {
             background: white;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             padding: 3rem;
-            max-width: 700px;
-            width: 100%;
+            max-width: 600px;
+            width: 90%;
             text-align: center;
         }
 
         .success-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #00CED1, #20B2AA);
+            background: linear-gradient(135deg, #48bb78, #38a169);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -55,15 +54,15 @@
         @keyframes pulse {
             0% {
                 transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(0, 206, 209, 0.7);
+                box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7);
             }
             70% {
                 transform: scale(1.05);
-                box-shadow: 0 0 0 10px rgba(0, 206, 209, 0);
+                box-shadow: 0 0 0 10px rgba(72, 187, 120, 0);
             }
             100% {
                 transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(0, 206, 209, 0);
+                box-shadow: 0 0 0 0 rgba(72, 187, 120, 0);
             }
         }
 
@@ -72,7 +71,7 @@
             font-weight: 700;
             color: #2d3748;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #00CED1, #20B2AA);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -90,27 +89,6 @@
             color: #718096;
             margin-bottom: 2.5rem;
             line-height: 1.8;
-        }
-
-        .event-reminder {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid #00CED1;
-            margin-bottom: 2rem;
-        }
-
-        .event-date {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #00CED1;
-            margin-bottom: 0.5rem;
-        }
-
-        .event-time {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 1rem;
         }
 
         .features {
@@ -137,13 +115,13 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #00CED1;
+            color: #48bb78;
             font-weight: bold;
             font-size: 1.1rem;
         }
 
         .back-btn {
-            background: linear-gradient(135deg, #00CED1 0%, #20B2AA 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
             padding: 1rem 2rem;
@@ -154,12 +132,15 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            text-transform: uppercase;
         }
 
         .back-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 206, 209, 0.3);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .back-btn:active {
+            transform: translateY(0);
         }
 
         .social-links {
@@ -187,14 +168,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #00CED1;
+            color: #667eea;
             text-decoration: none;
             transition: all 0.3s ease;
             border: 2px solid #e2e8f0;
         }
 
         .social-icon:hover {
-            background: #00CED1;
+            background: #667eea;
             color: white;
             transform: translateY(-2px);
         }
@@ -227,17 +208,9 @@
         <h2 class="subtitle">Tu registro a la masterclass ha sido confirmado</h2>
         
         <p class="description">
-            Te hemos enviado un correo de confirmación con todos los detalles de la masterclass gratuita sobre IA en la clínica veterinaria. 
+            Te hemos enviado un correo de confirmación con todos los detalles de la masterclass sobre IA en la clínica veterinaria. 
             Pronto recibirás información sobre el horario, contenido y materiales exclusivos directamente en tu bandeja de entrada.
         </p>
-        
-        <div class="event-reminder">
-            <div class="event-date">12/Ago - 7:30 P.M.</div>
-            <div class="event-time">Hora COL 🇨🇴 - Google Meet</div>
-            <p style="margin-top: 1rem; color: #666;">
-                ¡No olvides agregar el evento a tu calendario!
-            </p>
-        </div>
         
         <div class="features">
             <h3 style="margin-bottom: 1rem; color: #2d3748;">Lo que aprenderás:</h3>
