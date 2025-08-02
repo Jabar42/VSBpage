@@ -1,11 +1,11 @@
 # VSB Landing Page
 
-Una landing page moderna y elegante con un formulario de suscripción compatible con Netlify.
+Una landing page moderna y elegante para el registro de una masterclass gratuita con formulario compatible con Netlify.
 
 ## Características
 
 - ✅ Diseño moderno y responsive
-- ✅ Formulario de email compatible con Netlify
+- ✅ Formulario de registro para masterclass gratuita
 - ✅ Página de agradecimiento con redirección automática
 - ✅ Validación de formulario
 - ✅ Mensajes de éxito y error
@@ -50,7 +50,7 @@ El formulario está configurado para funcionar automáticamente con Netlify usan
 ## Flujo de Usuario
 
 1. El usuario visita la página principal (`index.html`)
-2. Completa el formulario de suscripción
+2. Completa el formulario de registro para la masterclass gratuita
 3. Al enviar, es redirigido automáticamente a la página de agradecimiento (`thank-you.html`)
 4. La página de agradecimiento muestra confirmación y se auto-redirige al inicio después de 10 segundos
 
